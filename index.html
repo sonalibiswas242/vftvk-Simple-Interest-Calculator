@@ -10,7 +10,8 @@
       <h1>Simple Interest Calculator</h1>
 
       Amount <input type="number" id="principal" /> <br />
-      Rate <input type="number" id="rate" /> <br />
+      Interest : <input type="range" id="rate" min="1" max="10" step="0.25" value="10" oninput="showVal(this.value)" onchange="showVal(this.value)"><span id="showRate"></span>
+      <br/>
       No. of Years
       <select id="years">
         <option value="1">1</option>
@@ -25,8 +26,7 @@
         <option value="10">10</option>
       </select> 
       <br />
-      Interest : <input type="range" id="rate" min="1" max="10" step="0.25" value="10" oninput="showVal(this.value)" onchange="showVal(this.value)"><span id="showRate"></span>
-      <br/>
+      
 
       <button onclick="compute()">Compute Interest</button>
       <span id="result"> </span>
